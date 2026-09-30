@@ -1,6 +1,6 @@
 # INJECT-RESPECT website
 
-A static website for the **INJECT-RESPECT Tool**, an interview guide for clinicians taking a history of injection drug use practices, focusing on infectious and non-infectious harms.
+A static website for **The INJECT-RESPECT Tool** (version 3.3), an interview guide for clinicians taking a history of injection drug use practices, focusing on infectious and non-infectious harms.
 
 Authors: Edward C. Traver, Sarah A. Schmalzle, Christopher Welsh, and Sarah Kattakuzhy.
 The INJECT-RESPECT Tool © 2026 is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
@@ -30,12 +30,12 @@ assets/js/data.js       all tool content (questions, glossary, references)
 assets/js/app.js        rendering and interactions
 assets/img/             favicon and app icons (SVG + PNG)
 assets/fonts/           Atkinson Hyperlegible Next (SIL Open Font License), self-hosted
-assets/INJECT-RESPECT_Tool.pdf
+assets/INJECT-RESPECT_Tool.pdf   the tool (v3.3); downloads as The_INJECT-RESPECT_Tool_v3.3.pdf
 ```
 
 ## Editing content
 
-All wording lives in `assets/js/data.js`. To mark a Quick interview question as a priority (the "bolded questions" the instructions refer to), change it from a string to an object:
+All wording lives in `assets/js/data.js`. To highlight a question, change it from a string to an object:
 
 ```js
 quick: [
@@ -73,3 +73,9 @@ python3 -m http.server 8000
 ```
 
 then visit http://localhost:8000.
+
+## Updating to a new version of the tool
+
+1. Replace `assets/INJECT-RESPECT_Tool.pdf` with the new PDF, keeping that file name so existing links keep working.
+2. Update the wording in `assets/js/data.js`, including `version`.
+3. In `index.html`, update the version number in the `download="…"` file names and in the About section.

@@ -1,36 +1,39 @@
 /*
- * INJECT-RESPECT Tool — content
- * Source: "Table 1: Elements of the history when evaluating for complications of injection drug use."
+ * The INJECT-RESPECT Tool (v3.3) — content
  * Authors: Edward C. Traver, Sarah A. Schmalzle, Christopher Welsh, and Sarah Kattakuzhy
  * The INJECT-RESPECT Tool © 2026 is licensed under CC BY-NC-SA 4.0.
  *
  * Editing notes
  * - `quick` and `detailed` mirror the two columns of the table.
- * - The instructions refer to "bolded questions" in the Quick Interview column.
- *   To mark one, write it as an object: { text: "…", priority: true }.
- *   Priority questions are shown with a marker and listed first in print.
+ * - To highlight a question, write it as an object: { text: "…", priority: true }.
+ *   It then shows in bold with a "Priority" marker.
  * - Words in a question that match a glossary entry are linked automatically
  *   (see `glossaryLinks` below).
  */
 
 window.INJECT_RESPECT = {
-  title: "INJECT-RESPECT",
-  subtitle: "Elements of the history when evaluating for complications of injection drug use",
+  title: "The INJECT-RESPECT Tool",
+  version: "3.3",
 
   instructions: [
     "These prompts provide guidance to obtain a history of injection drug use, focusing on infectious and non-infectious harms. The interview should ideally be conversational, with these points acting as a guide, rather than a checklist.",
-    "For situations where time is limited, focus on the “Quick Interview” column, especially the bolded questions. If time is plentiful, use questions from both columns. Focus the history on the past few months or weeks, since that has a greater influence on the current risk of infectious and other complications."
+    "For situations where time is limited, focus on the “Quick Interview” column. If time is plentiful, use questions from both columns. Focus the history on the past few months or weeks, since that has a greater influence on the current risk of infectious and other complications."
   ],
 
-  // Framing guidance, from the tool's instructions
+  // Guidance on the conversation, from the tool's instructions
   framing: {
-    lead: "The questions in this tool may elicit feelings of shame, trauma, and stigma among people who use drugs. Many people who use drugs have experienced shame, trauma, and stigma from healthcare workers and/or in healthcare settings.",
+    lead: [
+      "The questions in this tool may elicit feelings of shame, trauma, and stigma among people who use drugs. Many people who use drugs have experienced stigma from healthcare workers and/or in healthcare settings.",
+      "Additionally, it is important to value people who use drugs as complex, unique individuals. Be curious and treat everyone with respect."
+    ],
+    pointsIntro: "To facilitate an open and respectful conversation:",
     points: [
-      "Take time to introduce participants.",
-      "Frame the conversation around improving the health of the patient.",
-      "Limit the number of clinicians in the room and take steps to ensure privacy.",
-      "Directly assess risk, and elicit opportunities for specific harm reduction counseling and further treatment."
-    ]
+      "Frame the conversation around the health of the patient.",
+      "If you have information about positive drug toxicology testing, present that first in a matter-of-fact way, rather than leading with questions about drug use that could put patients in the position to feel misled or tricked.",
+      "To the extent possible, limit the number of clinicians in the room and take steps to ensure privacy.",
+      "The conversation should directly assess risks and yield opportunities for specific harm reduction counseling and further treatment."
+    ],
+    more: "See the references for more information on harm reduction counseling."
   },
 
   domains: [
@@ -258,7 +261,8 @@ window.INJECT_RESPECT = {
     { text: "Harm Reduction Coalition. Getting Off Right Safety Manual. Published 2012.", url: "https://harmreduction.org/drugs-and-drug-users/drug-tools/getting-off-right/", label: "harmreduction.org" },
     { text: "Peckham AM, Young EH. Opportunities to Offer Harm Reduction to People who Inject Drugs During Infectious Disease Encounters: Narrative Review. Open Forum Infectious Diseases. 2020;7(11).", url: "https://doi.org/10.1093/ofid/ofaa503", label: "doi:10.1093/ofid/ofaa503" },
     { text: "Stimson GV, Jones S, Chalmers C, Sullivan D. A short questionnaire (IRQ) to assess injecting risk behaviour. Addiction. 1998;93(3):337-347.", url: "https://doi.org/10.1046/j.1360-0443.1998.9333373.x", label: "doi:10.1046/j.1360-0443.1998.9333373.x" },
-    { text: "Thakarar K, Nenninger K, Agmas W. Harm Reduction Services to Prevent and Treat Infectious Diseases in People Who Use Drugs. Infectious Disease Clinics of North America. 2020;34(3):605-620.", url: "https://doi.org/10.1016/j.idc.2020.06.013", label: "doi:10.1016/j.idc.2020.06.013" }
+    { text: "Thakarar K, Nenninger K, Agmas W. Harm Reduction Services to Prevent and Treat Infectious Diseases in People Who Use Drugs. Infectious Disease Clinics of North America. 2020;34(3):605-620.", url: "https://doi.org/10.1016/j.idc.2020.06.013", label: "doi:10.1016/j.idc.2020.06.013" },
+    { text: "Safespot Overdose Hotline [Internet]. [cited 2026 Sep 30]. SafeSpot Overdose Hotline.", url: "https://safe-spot.me/", label: "safe-spot.me" }
   ],
 
   authors: ["Edward C. Traver", "Sarah A. Schmalzle", "Christopher Welsh", "Sarah Kattakuzhy"],

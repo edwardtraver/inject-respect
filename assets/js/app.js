@@ -102,9 +102,12 @@
   function buildBefore() {
     var box = $("#instructions");
     D.instructions.forEach(function (p) { box.appendChild(el("p", { text: p })); });
-    $("#framing-lead").textContent = D.framing.lead;
+    var lead = $("#framing-lead");
+    [].concat(D.framing.lead).forEach(function (p) { lead.appendChild(el("p", { text: p })); });
+    $("#framing-intro").textContent = D.framing.pointsIntro || "";
     var ul = $("#framing-points");
     D.framing.points.forEach(function (p) { ul.appendChild(el("li", { text: p })); });
+    $("#framing-more").textContent = D.framing.more || "";
   }
 
   /* ---------- Guide ---------- */
